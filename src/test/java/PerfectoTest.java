@@ -91,6 +91,8 @@ public class PerfectoTest {
 			Thread.sleep(10000);
 			oracleAppA.quit();
 			oracleAppi.quit();
+			oracleAppAv.quit();
+			oracleAppiv.quit();
 
 		}catch (Exception e)
 		{
