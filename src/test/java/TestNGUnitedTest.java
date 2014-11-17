@@ -84,29 +84,30 @@ public class TestNGUnitedTest {
 
 	 @DataProvider(name = "Devices" , parallel = true)
 	    public Object[][] testSumInput() {
-	        return new Object[][] { { "Android", "0149BCA71700D01F" }, 
-	        			{"iphone","39F3DA5531ADBE2A05CFF4D65E43A2C38D3D595A"}
-	        };
+	        return new Object[][] { { "39F3DA5531ADBE2A05CFF4D65E43A2C38D3D595A", "0149BCA71700D01F" }
+	    	        };
 	    }
 	 
 	//@Parameters({ "deviceID" })
 	@Test (dataProvider="Devices")
-	public void CheckFlight(String Type,String deviceID) {
+	public void CheckFlight(String dev1 ,String deviceID) {
 		_Device = deviceID;
  		String host = Constants.PM_CLOUD;
 		String user = Constants.PM_USER;
 		String password = Constants.PM_PASSWORD;
 		MobileDriver driver = new MobileDriver(host, user, password);
 		Reporter.log("Connect to:"+host);
- 		System.out.println(" **** new Drivewr  " + deviceID);
 
 		Reporter.log("device:"+deviceID);
+		Reporter.log("device:"+dev1);
+
 		IMobileDevice device = driver.getDevice(deviceID);
+		
 		Reporter.log("device MODEL :"+device.getProperty(MobileDeviceProperty.MODEL));
 		Reporter.log("device OS :"+device.getProperty(MobileDeviceProperty.OS));
 
 		PerfectoTest t = new PerfectoTest();
-		String rc =  t.checkFlights(device);
+		String rc =  t.runTest();
 
 		//assert rc.equals("New York/Newark, NJ (EWR)") : "Expected  New York/Newark, NJ (EWR)" + rc;
 		afterTest(driver);
