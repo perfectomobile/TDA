@@ -25,7 +25,10 @@ public class PerfectoTest {
 	public void runTest()
 	{
 		
-		MobileDriver PMdriver = new MobileDriver();
+		String host = Constants.PM_CLOUD;
+		String user = Constants.PM_USER;
+		String password = Constants.PM_PASSWORD;
+		MobileDriver driver = new MobileDriver(host, user, password);		
 		IMobileDevice device1 = PMdriver.getDevice("0149BCA71700D01F");
 		IMobileDevice device = PMdriver.getDevice("39F3DA5531ADBE2A05CFF4D65E43A2C38D3D595A");
 
