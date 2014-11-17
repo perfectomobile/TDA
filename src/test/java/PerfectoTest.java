@@ -39,8 +39,8 @@ public class PerfectoTest {
 		IMobileWebDriver oracleAppAv = device1.getVisualDriver();
 		IMobileWebDriver oracleAppiv = device.getVisualDriver();
 
-
-
+		device1.open();
+		device.open();
 		// closeApp
 		try{
 			oracleAppi.close();
