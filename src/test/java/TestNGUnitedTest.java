@@ -107,7 +107,7 @@ public class TestNGUnitedTest {
 		Reporter.log("device OS :"+device.getProperty(MobileDeviceProperty.OS));
 
 		PerfectoTest t = new PerfectoTest();
-		t.runTest();
+		t.runTest(driver);
 
 		//assert rc.equals("New York/Newark, NJ (EWR)") : "Expected  New York/Newark, NJ (EWR)" + rc;
 		afterTest(driver);
