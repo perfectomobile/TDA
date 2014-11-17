@@ -14,7 +14,7 @@ import com.perfectomobile.selenium.options.visual.text.MobileTextMatchMode;
 public class PerfectoTest {
 
 
-	public String checkFlights()
+	public String runTest()
 	{
 		
 		MobileDriver PMdriver = new MobileDriver();
