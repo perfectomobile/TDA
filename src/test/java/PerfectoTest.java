@@ -22,7 +22,7 @@ import com.perfectomobile.selenium.by.ByMobile;
 public class PerfectoTest {
 
 
-	public String runTest()
+	public void runTest()
 	{
 		
 		MobileDriver PMdriver = new MobileDriver();
