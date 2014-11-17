@@ -11,6 +11,14 @@ import com.perfectomobile.selenium.api.IMobileDevice;
 import com.perfectomobile.selenium.api.IMobileWebDriver;
 import com.perfectomobile.selenium.options.visual.text.MobileTextMatchMode;
 
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.*;
+
+import com.perfectomobile.selenium.*;
+import com.perfectomobile.selenium.api.*;
+import com.perfectomobile.selenium.by.ByMobile;
+
+
 public class PerfectoTest {
 
 
