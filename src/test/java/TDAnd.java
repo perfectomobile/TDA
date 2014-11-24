@@ -79,7 +79,7 @@ public class TDAnd {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			driver.quit();
+		//	driver.quit();
 		}
 		System.out.println("Run ended");
 	}
