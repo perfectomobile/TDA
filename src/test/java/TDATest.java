@@ -85,7 +85,8 @@ public class TestNGUnitedTest {
 	 @DataProvider(name = "Devices" , parallel = true)
 	    public Object[][] testSumInput() {
 	        return new Object[][] { { "Android", "0149BCA71700D01F" }, 
-	        			{ "Android", "A1A5438E" } ,
+	        			{ "Android", "7DE396A2" } ,
+	        			{ "iPhone", "CEC63D6236866DD8AA617904D40E0F3A8154376E" } ,
 	        			{"iphone","39F3DA5531ADBE2A05CFF4D65E43A2C38D3D595A"}
 	        };
 	    }
@@ -106,8 +107,14 @@ public class TestNGUnitedTest {
 		Reporter.log("device MODEL :"+device.getProperty(MobileDeviceProperty.MODEL));
 		Reporter.log("device OS :"+device.getProperty(MobileDeviceProperty.OS));
 
-		PerfectoTest t = new PerfectoTest();
-		String rc =  t.checkFlights(device);
+		if (reporter.equals("Android"))
+ 			{
+ 				TDAnd.exce(deviceID);
+ 			}
+ 		else
+ 			{
+ 				TDip.exce(deviceID); 
+ 			}
 
 		//assert rc.equals("New York/Newark, NJ (EWR)") : "Expected  New York/Newark, NJ (EWR)" + rc;
 		afterTest(driver);
