@@ -46,9 +46,9 @@ public class TDAnd {
 
 			// go to Research/News Tab
 
-			device.getMobileTouchScreen().swipe(new MobileCoordinates(new MobilePoint("317,915")), new MobileCoordinates(new MobilePoint("591,330")), 2);
+			device.getMobileTouchScreen().swipe(new MobileCoordinates(new MobilePoint("317,915")), new MobileCoordinates(new MobilePoint("326,290")), 2);
 
-			device.getMobileTouchScreen().swipe(new MobileCoordinates(new MobilePoint("317,015")), new MobileCoordinates(new MobilePoint("671,684")), 1);
+			device.getMobileTouchScreen().swipe(new MobileCoordinates(new MobilePoint("317,915")), new MobileCoordinates(new MobilePoint("326,290")), 1);
 
 			sleep(3000);
 
