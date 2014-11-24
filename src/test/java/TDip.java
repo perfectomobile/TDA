@@ -25,8 +25,13 @@ public class TDip {
 		try {
 			// write your code here
 
-			device.getNativeDriver("Ameritrade").close();
-			sleep(6000);  
+			try {
+				device.getNativeDriver("Ameritrade").close();
+				sleep(3000);  
+				
+			} catch (Exception e) {
+				// Do nothing app closed
+			}
 			device.getNativeDriver("Ameritrade").open();
 			visual.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visual.findElement(By.linkText("you are not logged in"));
