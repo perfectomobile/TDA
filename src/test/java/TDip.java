@@ -13,13 +13,7 @@ public class TDip {
 	public  static void main(String[] args) {
 		exce("CEC63D6236866DD8AA617904D40E0F3A8154376E");
 	}
-	public static void exce(String deviceID ) {
-
-		System.out.println("Run started");
-		String host = Constants.PM_CLOUD;
-		String user = Constants.PM_USER;
-		String password = Constants.PM_PASSWORD;
-		MobileDriver driver = new MobileDriver(host, user, password);
+	public static void exce(String deviceID ,MobileDriver driver) {
 
 		IMobileDevice device = ((IMobileDriver) driver).getDevice(deviceID);
 
