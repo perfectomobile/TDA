@@ -25,7 +25,13 @@ public class TDAnd {
 
 		try {
 			// write your code here
-
+			try {
+				device.getNativeDriver("Ameritrade").close();
+				sleep(3000);  
+				
+			} catch (Exception e) {
+				// Do nothing app closed
+			}
 			device.getNativeDriver("Ameritrade").open();
 			visual.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visual.findElement(By.linkText("you are not logged in"));
