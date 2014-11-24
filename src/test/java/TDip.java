@@ -11,7 +11,7 @@ import com.perfectomobile.selenium.api.*;
 
 public class TDip {
 	public  static void main(String[] args) {
-		exce("CEC63D6236866DD8AA617904D40E0F3A8154376E");
+		//exce("CEC63D6236866DD8AA617904D40E0F3A8154376E");
 	}
 	public static void exce(String deviceID ,MobileDriver driver) {
 
