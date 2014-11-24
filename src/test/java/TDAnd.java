@@ -11,7 +11,7 @@ import com.perfectomobile.selenium.api.*;
 
 public class TDAnd {
 	public  static void main(String[] args) {
-		exce("7DE396A2");
+	//	exce("7DE396A2");
 	}
 	public static void exce(String deviceID,MobileDriver driver ) {
 
