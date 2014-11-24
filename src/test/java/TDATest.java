@@ -107,7 +107,7 @@ public class TDATest {
 		Reporter.log("device MODEL :"+device.getProperty(MobileDeviceProperty.MODEL));
 		Reporter.log("device OS :"+device.getProperty(MobileDeviceProperty.OS));
 
-		if (reporter.equals("Android"))
+		if (Type.equals("Android"))
  			{
  				TDAnd.exce(deviceID);
  			}
