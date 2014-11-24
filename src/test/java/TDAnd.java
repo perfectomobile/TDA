@@ -13,15 +13,9 @@ public class TDAnd {
 	public  static void main(String[] args) {
 		exce("7DE396A2");
 	}
-	public static void exce(String deviceID ) {
+	public static void exce(String deviceID,MobileDriver driver ) {
 
-		System.out.println("Run started");
-		String host = Constants.PM_CLOUD;
-		String user = Constants.PM_USER;
-		String password = Constants.PM_PASSWORD;
-		MobileDriver driver = new MobileDriver(host, user, password);
-
-
+	
 		IMobileDevice device = ((IMobileDriver) driver).getDevice(deviceID);
 
 		device.open();
