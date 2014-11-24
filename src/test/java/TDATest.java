@@ -93,7 +93,7 @@ public class TDATest {
 	 
 	//@Parameters({ "deviceID" })
 	@Test (dataProvider="Devices")
-	public void CheckFlight(String Type,String deviceID) {
+	public void SmokeTest(String Type,String deviceID) {
 		_Device = deviceID;
  		String host = Constants.PM_CLOUD;
 		String user = Constants.PM_USER;
