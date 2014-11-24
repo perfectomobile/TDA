@@ -109,11 +109,11 @@ public class TDATest {
 
 		if (Type.equals("Android"))
  			{
- 				TDAnd.exce(deviceID);
+ 				TDAnd.exce(deviceID,driver);
  			}
  		else
  			{
- 				TDip.exce(deviceID); 
+ 				TDip.exce(deviceID,driver); 
  			}
 
 		//assert rc.equals("New York/Newark, NJ (EWR)") : "Expected  New York/Newark, NJ (EWR)" + rc;
