@@ -16,8 +16,10 @@ public class TDip {
 	public static void exce(String deviceID ) {
 
 		System.out.println("Run started");
-		MobileDriver driver = new MobileDriver();
-
+		String host = Constants.PM_CLOUD;
+		String user = Constants.PM_USER;
+		String password = Constants.PM_PASSWORD;
+		MobileDriver driver = new MobileDriver(host, user, password);
 
 		IMobileDevice device = ((IMobileDriver) driver).getDevice(deviceID);
 
