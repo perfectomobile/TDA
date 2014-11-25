@@ -86,6 +86,12 @@ public class TDATest {
 	    public Object[][] testSumInput() {
 	        return new Object[][] { { "Android", "0149BCA71700D01F" }, 
 	        			{ "Android", "7DE396A2" } ,
+	        				{ "Android", "A1A5438E" } ,
+	        				{ "Android", "A1A54311" } ,
+	        				{ "Android", "57AF4ED9" } ,
+	        				{ "Android", "3050BE36" } ,
+	        				{ "Android", "5751A868" } ,
+	        				{ "Android", "E59BF45B" } ,
 	        			{ "iPhone", "CEC63D6236866DD8AA617904D40E0F3A8154376E" } ,
 	        			{"iphone","39F3DA5531ADBE2A05CFF4D65E43A2C38D3D595A"}
 	        };
