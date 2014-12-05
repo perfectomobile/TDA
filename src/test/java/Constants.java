@@ -6,10 +6,10 @@ public class Constants
 
 
 //	public static final String PM_USER = "uzie@perfectomobile.com";
-	public static final String PM_PASSWORD = "Perfecto1";
-	public static final String PM_USER = "uzie@perfectomobile.com";
+	public static final String PM_PASSWORD = "tda123";
+	public static final String PM_USER = "automation@tdameritrade.com";
 
-	public static final String PM_CLOUD = "demo.perfectomobile.com";
+	public static final String PM_CLOUD = "tda.perfectomobile.com";
 	
 	public static final String REPORT_LIB = "c:\\test\\";
 
