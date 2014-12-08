@@ -5,11 +5,18 @@ package test.java;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -83,15 +90,26 @@ public class TDATest {
 	}
 
 	 @DataProvider(name = "Devices" , parallel = true)
-	    public Object[][] testSumInput() {
-	        return new Object[][] { { "Android", "56CF2680" }, 
-	        			{ "iPhone", "92B02AF82A5A1756651DCEBD9495BDF8993045C4" } 
-	        };
+	    public Object[][] testSumInput() throws BiffException, IOException {
+		 
+		 Workbook workbook1 = Workbook.getWorkbook(new File("C:/Program Files/Eclipse Files/Device_List.xls"));
+			Sheet sheet1 = workbook1.getSheet(0);
+			Cell[] devices = sheet1.getColumn(1);
+			Cell[] Type = sheet1.getColumn(0);
+			
+			Object deviceData [][]=new Object[devices.length][2];
+			for(int i=0;i<deviceData.length;i++)
+				{
+				deviceData[i][0]=Type[i].getContents();
+				deviceData[i][1]=devices[i].getContents();
+						
+				}
+			return deviceData; 
 	    }
 	 
 	//@Parameters({ "deviceID" })
 	@Test (dataProvider="Devices")
-	public void SmokeTest(String Type,String deviceID) {
+	public void SmokeTest(String devicetype, String deviceID) {
 		_Device = deviceID;
  		String host = Constants.PM_CLOUD;
 		String user = Constants.PM_USER;
@@ -105,7 +123,7 @@ public class TDATest {
 		Reporter.log("device MODEL :"+device.getProperty(MobileDeviceProperty.MODEL));
 		Reporter.log("device OS :"+device.getProperty(MobileDeviceProperty.OS));
 
-		if (Type.equals("Android"))
+		if (devicetype.equals("Android"))
  			{
  				TDAnd.exce(deviceID,driver);
  			}
