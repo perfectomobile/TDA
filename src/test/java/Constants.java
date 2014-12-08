@@ -7,7 +7,7 @@ public class Constants
 
 //	public static final String PM_USER = "uzie@perfectomobile.com";
 	public static final String PM_PASSWORD = "tda123";
-	public static final String PM_USER = "automation@tdameritrade.com";
+	public static final String PM_USER = "automation2@tdameritrade.com";
 
 	public static final String PM_CLOUD = "tda.perfectomobile.com";
 	
