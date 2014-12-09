@@ -92,7 +92,7 @@ public class TDATest {
 	 @DataProvider(name = "Devices" , parallel = true)
 	    public Object[][] testSumInput() throws BiffException, IOException {
 		 
-		 Workbook workbook1 = Workbook.getWorkbook(new File("C:/Program Files/Eclipse Files/Device_List.xls"));
+		 Workbook workbook1 = Workbook.getWorkbook(new File("C:\\TDA\\Device_List.xls"));
 			Sheet sheet1 = workbook1.getSheet(0);
 			Cell[] devices = sheet1.getColumn(1);
 			Cell[] Type = sheet1.getColumn(0);
