@@ -98,7 +98,7 @@ public class TDATest {
 			Cell[] Type = sheet1.getColumn(0);
 			
 			Object deviceData [][]=new Object[devices.length][2];
-			for(int i=0;i<deviceData.length;i++)
+			for(int i=1;i<deviceData.length;i++)
 				{
 				deviceData[i][0]=Type[i].getContents();
 				deviceData[i][1]=devices[i].getContents();
