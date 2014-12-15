@@ -26,18 +26,21 @@ public class TDip {
 			// write your code here
 
 			try {
-				device.getNativeDriver("Ameritrade").close();
-				sleep(3000);  
+				 device.getNativeDriver("Ameritrade").open();
+				 wait 5000;
+				 while(true) {
+					System.out.println("Inside while block");
+					WebDriver.findElement(By.xpath("//*[starts-with(@label,\"OK\")and @isvisible=\"true\"]")).click();
+					//WebDriver.findElement(By.xpath("//device/view/window[3]/alert[1]/table[1]/cell[1]")).click();
+					sleep(3000);
+					
+				}
 				
 			} catch (Exception e) {
-				// Do nothing app closed
+				// Do nothing
 			}
-			device.getNativeDriver("Ameritrade").open();
-			visual.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			visual.findElement(By.linkText("you are not logged in"));
-
-
-
+			
+			
 			// go to Research Tab
 
 			WebDriver.findElement(By.linkText("Research")).click();
