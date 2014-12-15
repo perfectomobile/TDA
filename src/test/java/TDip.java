@@ -27,7 +27,7 @@ public class TDip {
 
 			try {
 				 device.getNativeDriver("Ameritrade").open();
-				 wait 5000;
+				 sleep(5000);
 				 while(true) {
 					System.out.println("Inside while block");
 					WebDriver.findElement(By.xpath("//*[starts-with(@label,\"OK\")and @isvisible=\"true\"]")).click();
